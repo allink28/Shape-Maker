@@ -103,17 +103,16 @@ public class ShapeMakerPanel extends JPanel
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g);
-        if ( point1 != null && obj != null)
-        {
-            shape.draw(g);
-
-        }
-        if ( !list.isEmpty())
+        if (!list.isEmpty())
         {
             for ( Shape s : list )
             {
                 s.draw(g);
             }
+        }
+        if (point1 != null && obj != null)
+        {
+            shape.draw(g);
         }
     }
 
@@ -276,19 +275,10 @@ public class ShapeMakerPanel extends JPanel
             if ( e.getSource() == shapeChoice)
             {
                 obj = shapeChoice.getSelectedItem();
-
             }
             else
             {
-
-                if ( checkbox )
-                {
-                    checkbox = false;
-                }
-                else
-                {
-                    checkbox = true;
-                }
+                checkbox = !checkbox;
             }
         }
     }
