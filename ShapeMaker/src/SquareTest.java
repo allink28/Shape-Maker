@@ -2,27 +2,28 @@ import java.awt.Color;
 import java.awt.Point;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+
 import student.GUITestCase;
 
 
 // -------------------------------------------------------------------------
+
 /**
- *  Test methods for the Oval class.
+ * Test methods for the Oval class.
  *
- *  @author Allen Preville (a892186)
- *  @version Mar 5, 2010
+ * @author Allen Preville (a892186)
+ * @version Mar 5, 2010
  */
 
 public class SquareTest
-    extends GUITestCase
-{
+        extends GUITestCase {
 
     // ----------------------------------------------------------
+
     /**
      * Test method for {@link Square#draw(java.awt.Graphics)}.
      */
-    public void testDraw()
-    {
+    public void testDraw() {
         ShapeMakerPanel panel = new ShapeMakerPanel();
         showInFrame(panel);
         JComboBox shapeChooser = getComponent(JComboBox.class, "shapeChoice");
@@ -68,15 +69,14 @@ public class SquareTest
 
     /**
      * Test method for {@link Square#Square(java.awt.Point, java.awt.Point,
-     *  java.awt.Color)}.
+     * java.awt.Color)}.
      */
-    public void testSquare()
-    {
+    public void testSquare() {
         Square square = new Square(new Point(0, 0), new Point(1, 1),
-            Color.green);
-        assertEquals( Color.green, square.getColor());
-        assertEquals( new Point(0, 0), square.getPoint1());
-        assertEquals( new Point(1, 1), square.getPoint2());
+                Color.green);
+        assertEquals(Color.green, square.getColor());
+        assertEquals(new Point(0, 0), square.getPoint1());
+        assertEquals(new Point(1, 1), square.getPoint2());
     }
 
 }

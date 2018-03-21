@@ -2,28 +2,29 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
+
 import student.GUITestCase;
 
 
 // -------------------------------------------------------------------------
+
 /**
- *  Test class for the main method of .
+ * Test class for the main method of .
  *
- *  @author Allen Preville (a892186)
- *  @version Mar 5, 2010
+ * @author Allen Preville (a892186)
+ * @version Mar 5, 2010
  */
 
 public class ShapeMakerTest
-    extends GUITestCase
-{
+        extends GUITestCase {
 
     // ----------------------------------------------------------
+
     /**
      * Test that ShapeMaker displays a panel.
      */
-    public void testShapeMaker()
-    {
-        ShapeMaker.main( null );
+    public void testShapeMaker() {
+        ShapeMaker.main(null);
 
         ShapeMakerPanel panel = getComponent(ShapeMakerPanel.class);
         assertNotNull(panel);

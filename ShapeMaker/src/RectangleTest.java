@@ -2,27 +2,28 @@ import java.awt.Color;
 import java.awt.Point;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+
 import student.GUITestCase;
 
 
 // -------------------------------------------------------------------------
+
 /**
- *  Test methods for the Rectangle class.
+ * Test methods for the Rectangle class.
  *
- *  @author Allen Preville (a892186)
- *  @version Mar 5, 2010
+ * @author Allen Preville (a892186)
+ * @version Mar 5, 2010
  */
 
 public class RectangleTest
-    extends GUITestCase
-{
+        extends GUITestCase {
 
     // ----------------------------------------------------------
+
     /**
      * Test method for {@link Oval#draw(java.awt.Graphics)}.
      */
-    public void testDraw()
-    {
+    public void testDraw() {
         ShapeMakerPanel panel = new ShapeMakerPanel();
         showInFrame(panel);
         JComboBox shapeChooser = getComponent(JComboBox.class, "shapeChoice");
@@ -69,13 +70,12 @@ public class RectangleTest
      * Test method for {@link Rectangle#Rectangle(java.awt.Point,
      * java.awt.Point, java.awt.Color)}.
      */
-    public void testRectangle()
-    {
+    public void testRectangle() {
         Rectangle rectangle = new Rectangle(new Point(0, 0), new Point(1, 1),
-            Color.green);
-        assertEquals( Color.green, rectangle.getColor());
-        assertEquals( new Point(0, 0), rectangle.getPoint1());
-        assertEquals( new Point(1, 1), rectangle.getPoint2());
+                Color.green);
+        assertEquals(Color.green, rectangle.getColor());
+        assertEquals(new Point(0, 0), rectangle.getPoint1());
+        assertEquals(new Point(1, 1), rectangle.getPoint2());
     }
 
 }
